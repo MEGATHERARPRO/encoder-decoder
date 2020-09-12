@@ -34,6 +34,12 @@ for char in ss:
         ssi -= 16
     elif lchar == "e":
         ssi -= 32
+    elif lchar == "f":
+        ssi -= 64
+    elif lchar == "g":
+        ssi -= 128
+    elif lchar == "h":
+        ssi -= 256
     elif lchar == "1":
         ssi += 3
     elif lchar == "2":
@@ -54,9 +60,11 @@ for char in ss:
         ssi += 61
     elif lchar == "0":
         ssi += 67
+    elif lchar == "-":
+        ssi += 73
     else:
-        ssi -= 64
-    ssi ** 2
+        ssi -= 512
+    ssi ** 4
 random.seed(ssi)
 random.shuffle(el)
 random.shuffle(elr)
