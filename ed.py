@@ -19,32 +19,67 @@ el8 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"
 elr8 = ["а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я"]
 el9 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 elr9 = ["а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я"]
-shuffleseed = int(input(" Encryption key > "))
-random.seed(shuffleseed)
+ss = str(input(" Encryption key > "))
+ssi = 0
+for char in ss:
+    lchar = char.lower()
+    if lchar == "a":
+        ssi -= 2
+    elif lchar == "b":
+        ssi -= 4
+    elif lchar == "c":
+        ssi -= 8
+    elif lchar == "d":
+        ssi -= 16
+    elif lchar == "e":
+        ssi -= 32
+    elif lchar == "1":
+        ssi += 3
+    elif lchar == "2":
+        ssi += 5
+    elif lchar == "3":
+        ssi += 7
+    elif lchar == "4":
+        ssi += 11
+    elif lchar == "5":
+        ssi += 13
+    elif lchar == "6":
+        ssi += 17
+    elif lchar == "7":
+        ssi += 29
+    elif lchar == "8":
+        ssi += 43
+    elif lchar == "9":
+        ssi += 61
+    elif lchar == "0":
+        ssi += 67
+    else:
+        ssi -= 64
+random.seed(ssi)
 random.shuffle(el)
 random.shuffle(elr)
-random.seed(shuffleseed*2)
+random.seed(ssi*2)
 random.shuffle(el2)
 random.shuffle(elr2)
-random.seed(shuffleseed*3)
+random.seed(ssi*3)
 random.shuffle(el3)
 random.shuffle(elr3)
-random.seed(shuffleseed*4)
+random.seed(ssi*4)
 random.shuffle(el4)
 random.shuffle(elr4)
-random.seed(shuffleseed*5)
+random.seed(ssi*5)
 random.shuffle(el5)
 random.shuffle(elr5)
-random.seed(shuffleseed*6)
+random.seed(ssi*6)
 random.shuffle(el6)
 random.shuffle(elr6)
-random.seed(shuffleseed*7)
+random.seed(ssi*7)
 random.shuffle(el7)
 random.shuffle(elr7)
-random.seed(shuffleseed*8)
+random.seed(ssi*8)
 random.shuffle(el8)
 random.shuffle(elr8)
-random.seed(shuffleseed*9)
+random.seed(ssi*9)
 random.shuffle(el9)
 random.shuffle(elr9)
 userinput1 = ""
