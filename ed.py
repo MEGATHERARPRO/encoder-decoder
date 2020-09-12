@@ -14,6 +14,12 @@ el5 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"
 elr5 = ["а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я"]
 el6 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 elr6 = ["а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я"]
+el7 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+elr7 = ["а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я"]
+el8 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+elr8 = ["а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я"]
+el9 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+elr9 = ["а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я"]
 random.seed(shuffleseed)
 random.shuffle(el)
 random.shuffle(elr)
@@ -32,6 +38,15 @@ random.shuffle(elr5)
 random.seed(shuffleseed*6)
 random.shuffle(el6)
 random.shuffle(elr6)
+random.seed(shuffleseed*7)
+random.shuffle(el7)
+random.shuffle(elr7)
+random.seed(shuffleseed*8)
+random.shuffle(el8)
+random.shuffle(elr8)
+random.seed(shuffleseed*9)
+random.shuffle(el9)
+random.shuffle(elr9)
 userinput1 = ""
 length = len(nl)
 length2 = len(nlr)
@@ -65,11 +80,23 @@ while userinput1 != "exit":
                     for i in range(length): 
                         if nl[i] == char:
                             em += el5[i]
-                elif i1 >= 6:
-                    i1 = 0
+                elif i1 == 6:
                     for i in range(length): 
                         if nl[i] == char:
                             em += el6[i]
+                elif i1 == 7:
+                    for i in range(length): 
+                        if nl[i] == char:
+                            em += el7[i]
+                elif i1 == 8:
+                    for i in range(length): 
+                        if nl[i] == char:
+                            em += el8[i]
+                elif i1 >= 9:
+                    i1 = 0
+                    for i in range(length): 
+                        if nl[i] == char:
+                            em += el9[i]
             elif char in nlr:
                 if i1 == 1:
                     for i in range(length2): 
@@ -91,11 +118,23 @@ while userinput1 != "exit":
                     for i in range(length2): 
                         if nlr[i] == char:
                             em += elr5[i]
-                elif i1 >= 6:
-                    i1 = 0
+                elif i1 == 6:
                     for i in range(length2): 
                         if nlr[i] == char:
                             em += elr6[i]
+                elif i1 == 7:
+                    for i in range(length2): 
+                        if nlr[i] == char:
+                            em += elr7[i]
+                elif i1 == 8:
+                    for i in range(length2): 
+                        if nlr[i] == char:
+                            em += elr8[i]
+                elif i1 >= 9:
+                    i1 = 0
+                    for i in range(length2): 
+                        if nlr[i] == char:
+                            em += elr9[i]
             else:
                 em += char
         print(" {}".format(em))
@@ -127,10 +166,22 @@ while userinput1 != "exit":
                     for i in range(length): 
                         if el5[i] == char:
                             nm += nl[i]
-                elif i1 >= 6:
-                    i1 = 0
+                elif i1 == 6:
                     for i in range(length): 
                         if el6[i] == char:
+                            nm += nl[i]
+                elif i1 == 7:
+                    for i in range(length): 
+                        if el7[i] == char:
+                            nm += nl[i]
+                elif i1 == 8:
+                    for i in range(length): 
+                        if el8[i] == char:
+                            nm += nl[i]
+                elif i1 >= 9:
+                    i1 = 0
+                    for i in range(length): 
+                        if el9[i] == char:
                             nm += nl[i]
             elif char in nlr:
                 if i1 == 1:
@@ -153,10 +204,22 @@ while userinput1 != "exit":
                     for i in range(length2): 
                         if elr5[i] == char:
                             nm += nlr[i]
-                elif i1 >= 6:
-                    i1 = 0
+                elif i1 == 6:
                     for i in range(length2): 
                         if elr6[i] == char:
+                            nm += nlr[i]
+                elif i1 == 7:
+                    for i in range(length2): 
+                        if elr7[i] == char:
+                            nm += nlr[i]
+                elif i1 == 8:
+                    for i in range(length2): 
+                        if elr8[i] == char:
+                            nm += nlr[i]
+                elif i1 >= 9:
+                    i1 = 0
+                    for i in range(length2): 
+                        if elr9[i] == char:
                             nm += nlr[i]
             else:
                 nm += char
