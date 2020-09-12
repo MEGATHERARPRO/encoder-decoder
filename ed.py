@@ -56,22 +56,34 @@ ssi = 0
 print(" Calculating seed 1...")
 for char in ss:
     lchar = char.lower()
-    if lchar == "a":
+    if lchar in "a":
+        ssi -= 1
+    elif lchar in "b":
         ssi -= 2
-    elif lchar == "b":
+    elif lchar in "c":
         ssi -= 4
-    elif lchar == "c":
+    elif lchar in "d":
         ssi -= 8
-    elif lchar == "d":
+    elif lchar in "e":
         ssi -= 16
-    elif lchar == "e":
+    elif lchar in "f":
         ssi -= 32
-    elif lchar == "f":
+    elif lchar in "g":
         ssi -= 64
-    elif lchar == "g":
+    elif lchar in "h":
         ssi -= 128
-    elif lchar == "h":
+    elif lchar in "i":
         ssi -= 256
+    elif lchar in "j":
+        ssi -= 512
+    elif lchar in "k":
+        ssi -= 1024
+    elif lchar in "l":
+        ssi -= 2048
+    elif lchar in "m":
+        ssi -= 4096
+    elif lchar in "n":
+        ssi -= 8192
     elif lchar == "1":
         ssi += 3
     elif lchar == "2":
@@ -95,7 +107,7 @@ for char in ss:
     elif lchar == "-":
         ssi += 73
     else:
-        ssi -= 512
+        ssi -= 16384
     ssi ** 4
 random.seed(ssi)
 random.shuffle(el)
