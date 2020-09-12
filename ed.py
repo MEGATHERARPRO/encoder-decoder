@@ -21,6 +21,7 @@ el9 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"
 elr9 = ["а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я"]
 ss = str(input(" Encryption key > "))
 ssi = 0
+print(" Calculating seed 1...")
 for char in ss:
     lchar = char.lower()
     if lchar == "a":
@@ -55,31 +56,40 @@ for char in ss:
         ssi += 67
     else:
         ssi -= 64
+    ssi ** 2
 random.seed(ssi)
 random.shuffle(el)
 random.shuffle(elr)
-random.seed(ssi*2)
+print(" Calculating seed 2...")
+random.seed(ssi**2)
 random.shuffle(el2)
 random.shuffle(elr2)
-random.seed(ssi*3)
+print(" Calculating seed 3...")
+random.seed(ssi**3)
 random.shuffle(el3)
 random.shuffle(elr3)
-random.seed(ssi*4)
+print(" Calculating seed 4...")
+random.seed(ssi**4)
 random.shuffle(el4)
 random.shuffle(elr4)
-random.seed(ssi*5)
+print(" Calculating seed 5...")
+random.seed(ssi**5)
 random.shuffle(el5)
 random.shuffle(elr5)
-random.seed(ssi*6)
+print(" Calculating seed 6...")
+random.seed(ssi**6)
 random.shuffle(el6)
 random.shuffle(elr6)
-random.seed(ssi*7)
+print(" Calculating seed 7...")
+random.seed(ssi**7)
 random.shuffle(el7)
 random.shuffle(elr7)
-random.seed(ssi*8)
+print(" Calculating seed 8...")
+random.seed(ssi**8)
 random.shuffle(el8)
 random.shuffle(elr8)
-random.seed(ssi*9)
+print(" Calculating seed 9...")
+random.seed(ssi**9)
 random.shuffle(el9)
 random.shuffle(elr9)
 userinput1 = ""
