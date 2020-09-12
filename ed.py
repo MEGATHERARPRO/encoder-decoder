@@ -5,44 +5,6 @@ ss = str(input(" Encryption key > "))
 ssi = 0
 for char in ss:
     lchar = char.lower()
-    if lchar in "a":
-        ssi -= 2
-    elif lchar in "b":
-        ssi -= 4
-    elif lchar in "c":
-        ssi -= 8
-    elif lchar in "d":
-        ssi -= 16
-    elif lchar in "e":
-        ssi -= 32
-    elif lchar in "f":
-        ssi -= 64
-    elif lchar in "g":
-        ssi -= 128
-    elif lchar in "h":
-        ssi -= 256
-    elif lchar in "i":
-        ssi -= 512
-    elif lchar in "j":
-        ssi -= 1024
-    elif lchar in "k":
-        ssi -= 2048
-    elif lchar in "l":
-        ssi -= 4096
-    elif lchar in "m":
-        ssi -= 8192
-    elif lchar in "n":
-        ssi -= 16384
-    elif lchar in "o":
-        ssi -= 32768
-    elif lchar in "p":
-        ssi -= 65536
-    elif lchar in "q":
-        ssi -= 131072
-    elif lchar in "r":
-        ssi -= 262144
-    elif lchar in "s":
-        ssi -= 524288
     elif lchar == "1":
         ssi += 3
     elif lchar == "2":
@@ -56,23 +18,61 @@ for char in ss:
     elif lchar == "6":
         ssi += 17
     elif lchar == "7":
-        ssi += 29
+        ssi += 19
     elif lchar == "8":
-        ssi += 43
+        ssi += 23
     elif lchar == "9":
-        ssi += 61
+        ssi += 29
     elif lchar == "0":
-        ssi += 67
+        ssi += 31
     elif lchar == "-":
-        ssi += 73
+        ssi += 37
     elif lchar == "!":
-        ssi += 83
+        ssi += 43
     elif lchar == "@":
-        ssi += 91
+        ssi += 47
     elif lchar == "#":
+        ssi += 53
+    if lchar in "a":
+        ssi += 61
+    elif lchar in "b":
+        ssi += 67
+    elif lchar in "c":
+        ssi += 71
+    elif lchar in "d":
+        ssi += 73
+    elif lchar in "e":
+        ssi += 79
+    elif lchar in "f":
+        ssi += 83
+    elif lchar in "g":
+        ssi += 89
+    elif lchar in "h":
+        ssi += 97
+    elif lchar in "i":
+        ssi += 101
+    elif lchar in "j":
         ssi += 103
+    elif lchar in "k":
+        ssi += 107
+    elif lchar in "l":
+        ssi += 109
+    elif lchar in "m":
+        ssi += 113
+    elif lchar in "n":
+        ssi += 127
+    elif lchar in "o":
+        ssi += 131
+    elif lchar in "p":
+        ssi += 137
+    elif lchar in "q":
+        ssi += 139
+    elif lchar in "r":
+        ssi += 149
+    elif lchar in "s":
+        ssi += 151
     else:
-        ssi -= 1048576
+        ssi += 59
     ssi ** 4
 userinput1 = ""
 length = len(nl)
