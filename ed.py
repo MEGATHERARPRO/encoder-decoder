@@ -1,3 +1,4 @@
+# Version: 0.4
 import random
 nl = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 nlr = ["а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я"]
@@ -5,7 +6,7 @@ ss = str(input(" Encryption key > "))
 ssi = 0
 for char in ss:
     lchar = char.lower()
-    elif lchar == "1":
+    if lchar == "1":
         ssi += 3
     elif lchar == "2":
         ssi += 5
@@ -33,7 +34,7 @@ for char in ss:
         ssi += 47
     elif lchar == "#":
         ssi += 53
-    if lchar in "a":
+    elif lchar in "a":
         ssi += 61
     elif lchar in "b":
         ssi += 67
@@ -73,7 +74,6 @@ for char in ss:
         ssi += 151
     else:
         ssi += 59
-    ssi ** 4
 userinput1 = ""
 length = len(nl)
 length2 = len(nlr)
